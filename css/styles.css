@@ -688,3 +688,145 @@ ideo-container {
     height: auto;
     border-radius: 8px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section .container {
+    padding: 0;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .container:nth-child(even) {
+    margin-top: 60px;
+}
+
+.section .container .c50 {
+    width: 50%;
+    padding: 0 25px;
+}
+
+.section .container .c50 .videosList {
+    border-radius: 4px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.section .container .c50 .videosList .slidein {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    transition: 0.3s;
+}
+
+.section .container .c50 .videosList .slidein.active {
+    left: -100%;
+}
+
+.section .container .c50 .videosList .video {
+    background-image: url("https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg");
+    background-size: cover;
+    height: 330px;
+    width: 600px;
+}
+
+.section .container .c50 .videosList .video::-webkit-media-controls {
+    display: none !important;
+}
+
+.section .container .c50 .info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.section .container .c50 .info .slidein {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    transition: 0.3s;
+}
+
+.section .container .c50 .info .slidein.active {
+    left: -100%;
+}
+
+.section .container .c50 .info .title {
+    font-size: 24px;
+    font-family: "Barlow", san-serif;
+    line-height: 34px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section .container .c50 .info .text {
+    font-size: 16px;
+    font-family: "Barlow", san-serif;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.wrapbtn {
+    width: 100%;
+    text-align: center;
+}
+
+.wrapbtn .click {
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    outline: 0;
+    transition: 0.25s;
+}
+
+.wrapbtn .click:hover {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    transition: 0.45s;
+}
+
+
+/* Example of Tailwind CSS utility classes */
+
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+.text-indigo-600 {
+    color: #4F46E5;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all {
+    transition: all 0.2s;
+}
