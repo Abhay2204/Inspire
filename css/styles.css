@@ -617,74 +617,165 @@ ideo-container {
     /* Make sure it's above the video and overlay */
 }
 
-.custom-heading {
-    position: relative;
-    padding: 20px 0;
-    /* Adds space above and below the heading */
-    margin: 50px 0;
-    /* Adjust margin to add more space */
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    color: #080808;
-    -webkit-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-    text-align: center;
-    /* Ensures the text stays centered */
-}
-
-.custom-heading em {
-    font-style: normal;
-    font-weight: 600;
-}
-
-.seven .custom-heading {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    color: #222;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.seven .custom-heading:after,
-.seven .custom-heading:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #c50000;
-    border-top: 1px solid #c50000;
-    height: 5px;
-    background-color: #f8f8f8;
-}
-
-.about-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.main-section {
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1.3;
+}
+
+.content-left .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.content-left .img-wrapper {
+    width: 48%;
     height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.content-left .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+.content-left .img-wrapper:hover img {
+    transform: scale(1.2);
+}
+
+.content-right {
+    flex: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .description {
-    width: 50%;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
 }
 
-.image1 {
-    width: 50%;
-    text-align: center;
+.description h4 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #d35400;
 }
 
-.image1 img {
-    max-width: 100%;
-    height: auto;
+.description h2 {
+    font-size: 50px;
+    color: #1e272e;
+}
+
+.description p {
+    font-size: 18px;
+    color: #343434;
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+
+.description a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 140px;
+    height: 50px;
+    color: #fff;
+    background: #d35400;
     border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.description a:hover {
+    background: #e62c22;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+    .content-left {
+        width: 100%;
+        /* Ensure full width on mobile */
+        justify-content: center;
+        align-items: center;
+    }
+    .content-left .row {
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 20px;
+        /* Increase gap between items for better spacing */
+        justify-content: center;
+        width: 100%;
+        /* Ensure full width */
+    }
+    .content-left .img-wrapper {
+        width: 100%;
+        /* Images take full width on mobile */
+        margin: 0 auto;
+        /* Center the images */
+    }
+    .description {
+        text-align: center;
+        /* Center align text for a more balanced layout */
+        padding: 0 10px;
+        /* Add some padding to prevent text from touching the edges */
+    }
+    .description h4 {
+        font-size: 20px;
+        /* Adjust heading size for smaller screens */
+    }
+    .description h2 {
+        font-size: 32px;
+        /* Adjust main heading size */
+        margin: 10px 0;
+        /* Add some margin for spacing */
+    }
+    .description p {
+        font-size: 16px;
+        /* Slightly smaller text */
+        line-height: 28px;
+        /* Adjust line height for readability */
+    }
+    .description a {
+        font-size: 16px;
+        width: 160px;
+        /* Increase button width for a better touch target */
+        height: 50px;
+        line-height: 50px;
+        /* Adjust button height and line-height */
+        margin: 0 auto;
+        /* Center the button */
+    }
 }
