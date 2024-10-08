@@ -31,11 +31,11 @@
 
                 <!-- Navigation Menu -->
                 <ul class="menu menu-1">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About </a></li>
-                    <li><a href="#">Team</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About </a></li>
+
                     <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
 
                 </ul>
             </div>
@@ -45,9 +45,7 @@
 
     <div class="about">
         <!doctype html>
-        <html x-data="{colorMode: localStorage.getItem('colorMode') || localStorage.setItem('colorMode', 'light')}"
-            x-init="$watch('colorMode', val => localStorage.setItem('colorMode', val))"
-            x-bind:class="{'dark': colorMode === 'dark' || (colorMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}"
+        <html x-data="{colorMode: localStorage.getItem('colorMode') || localStorage.setItem('colorMode', 'light')}" x-init="$watch('colorMode', val => localStorage.setItem('colorMode', val))" x-bind:class="{'dark': colorMode === 'dark' || (colorMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}"
             class="scroll-smooth h-full overflow-y-auto">
 
         <head>
@@ -56,9 +54,7 @@
             <!-- The Play CDN is designed for development purposes only, and is not the best choice for production. -->
             <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
-            <link id="heading-font" rel="stylesheet" type="text/css"
-                href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap"
-                media="all" />
+            <link id="heading-font" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" media="all" />
             <style>
                 h1,
                 h2,
@@ -127,7 +123,7 @@
                         return ({
                             addVariant
                         }) => {
-                            for (let state of ["open", "checked", "selected", "active",
+                            for (let state of["open", "checked", "selected", "active",
                                     "disabled"
                                 ]) {
                                 addVariant(`${prefix}-${state}`, [
@@ -147,55 +143,43 @@
 
         </head>
 
-        <body x-data="{'openDialogId': ''}"
-            class='font-body antialiased h-full font-body antialiased text-[#000000] bg-[#fcfcfc] dark:text-[#ffffff] dark:bg-[#031022]'>
+        <body x-data="{'openDialogId': ''}" class='font-body antialiased h-full font-body antialiased text-[#000000] bg-[#fcfcfc] dark:text-[#ffffff] dark:bg-[#031022]'>
             <div class="py-11">
                 <div class="text-center flex flex-col gap-y-3 px-2 sm:mx-auto sm:max-w-5xl">
 
                     <h1 class="font-bold text-3xl text-slate-900 dark:text-gray-100 sm:text-4xl">Welcome to <br>
                         <custom style="color: rgb(255, 94, 0);"> Inspire Engineering Services </custom>
                     </h1>
-                    <p class="text-base dark:text-gray-400 sm:text-lg">Precision Engineering for Power Solutions –
-                        Experts in Welding, Cutting, and Structural Integrity for Power Plants</p>
+                    <p class="text-base dark:text-gray-400 sm:text-lg">"Empowering industries through expert fabrication, precise erection, and reliable maintenance services. With over 17 years of experience, we deliver quality solutions that ensure safety, efficiency, and lasting strength for every project,
+                        every time."</p>
                 </div>
                 <div class="grid grid-cols-2 mt-5 gap-y-5 sm:gap-y-0 lg:mx-auto lg:max-w-6xl">
                     <div class="col-span-2 sm:col-span-1">
-                        <img class="w-full bg-gray-50" alt="No alt" src="images/logo.png" />
+                        <img class="w-full bg-gray-50" alt="No alt" src="images/BHEL.png " />
                     </div>
-                    <div
-                        class="col-span-2 px-3 pb-3 dark:border-slate-700 border-gray-50 sm:col-span-1 sm:flex sm:flex-col sm:justify-center sm:pl-7 sm:border-t lg:border-r mb-5">
+                    <div class="col-span-2 px-3 pb-3 dark:border-slate-700 border-gray-50 sm:col-span-1 sm:flex sm:flex-col sm:justify-center sm:pl-7 sm:border-t lg:border-r mb-5">
                         <!-- Added mb-5 for margin-bottom -->
-                        <h1
-                            class="font-semibold text-gray-700 tracking-tight text-xl dark:text-gray-200 dark:divide-undefined sm:mb-2 md:my-1">
-                            About Us</h1>
-                        <p
-                            class="text-base font-normal tracking-tight leading-relaxed dark:divide-undefined dark:text-gray-300">
-                            At <b> IES </b>, we provide specialized industrial solutions for power plants, focusing on
-                            welding, cutting, rust treatment, and structural fabrication. Our skilled team ensures
-                            safety and efficiency by delivering high-quality
-                            maintenance and infrastructure projects. Whether replacing rusted components or constructing
-                            new structures, we are committed to precision and excellence, tailored to meet the unique
-                            needs of each project.
+                        <h1 class="font-bold text-gray-700 tracking-tight text-xl dark:text-gray-200 dark:divide-undefined sm:mb-2 md:my-1">
+                            Origin...</h1>
+                        <p class="text-lg font-normal tracking-tight leading-relaxed dark:divide-undefined dark:text-gray-300">
+                            <b> Inspire Engineering Services</b> is founded by
+                            <b> Ratheesh N </b> in 2018 in Kerala, our company began its operations at the <b> Bharat Heavy Electricals Limited (BHEL) </b>, initially focusing on the fabrication and erection of industrial structures and the maintenance
+                            of crucial equipment. With a strong emphasis on delivering quality work within stringent timelines, we quickly earned a reputation for reliability and precision in the power sector. <br> &nbsp;
+                            <br>
                         </p>
                     </div>
 
-                    <div
-                        class="col-span-2 px-3 pb-3 order-3 dark:border-slate-700 border-gray-50 sm:col-span-1 sm:flex sm:flex-col sm:justify-center sm:pl-7 sm:order-none sm:border-b lg:border-l">
-                        <h1
-                            class="font-semibold text-gray-700 tracking-tight text-xl dark:text-gray-200 dark:divide-undefined sm:mb-2 md:my-1">
-                            Team </h1>
-                        <p
-                            class="text-base font-normal tracking-tight leading-relaxed dark:divide-undefined dark:text-gray-300">
-                            our strength lies in our dedicated team of skilled professionals who work collaboratively to
-                            deliver exceptional results. We believe that effective teamwork fosters innovation, enhances
-                            safety, and drives efficiency in every project. By combining diverse
-                            expertise and perspectives, we ensure that all tasks are executed seamlessly, from planning
-                            and execution to quality assurance. Together, we are committed to exceeding client
-                            expectations and maintaining the highest standards
-                            of excellence in every endeavor.</p>
+                    <div class="col-span-2 px-3 pb-3 order-3 dark:border-slate-700 border-gray-50 sm:col-span-1 sm:flex sm:flex-col sm:justify-center sm:pl-7 sm:order-none sm:border-b lg:border-l">
+                        <h1 class="font-bold  text-gray-700 tracking-tight text-xl dark:text-gray-200 dark:divide-undefined sm:mb-2 md:my-1">
+                            Adani Power Limited.. </h1>
+                        <p class="text-lg font-normal tracking-tight leading-relaxed dark:divide-undefined dark:text-gray-300">
+                            In 2020, we transitioned to <b>
+                                Adani Power Limited </b>, expanding our capabilities to manage larger-scale projects. This shift allowed us to diversify our service portfolio, which now includes the erection of sophisticated equipment, repair and maintenance
+                            of boiler components, and the upkeep of rotating machinery. <br> &nbsp;Under the leadership of Ratheesh N, who brings over 17 years of industry experience, we continue to uphold our commitment to delivering high-quality solutions,
+                            safety-first practices, and timely project completion, making us a trusted partner in the industrial sector.</p>
                     </div>
                     <div class="col-span-2 order-2 sm:col-span-1 sm:order-none">
-                        <img class="w-full bg-gray-50" alt="No alt" src="images/group.jpg" />
+                        <img class="w-full bg-gray-50" alt="No alt" src="images/ADANI.png" />
                     </div>
                 </div>
             </div>
@@ -205,201 +189,145 @@
                 <div class="mx-auto max-w-7xl">
                     <div class="flex flex-wrap w-full px-4 pb-5">
                         <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                            <h1
-                                class="text-3xl title-font mb-2 text-gray-900 font-bold dark:text-slate-100 sm:text-4xl">
+                            <h1 class="text-3xl title-font mb-2 text-gray-900 font-bold dark:text-slate-100 sm:text-4xl">
                                 Our Works</h1>
                             <div class="h-1 rounded bg-primary w-14">
                                 <div class="p-2"></div>
                             </div>
                         </div>
-                        <p class="w-full text-lg leading-snug font-light font-body lg:w-1/2">we specialize in welding,
-                            cutting, rust treatment, and structural fabrication for power plants. Our expert team is
-                            dedicated to delivering high-quality, efficient solutions tailored to meet the unique needs
-                            of each project</p>
+                        <p class="w-full text-lg leading-snug font-light font-body lg:w-1/2"> <b>We specialize in the
+                                fabrication and erection of steel structures, along with the installation and
+                                maintenance of
+                                critical industrial equipment. With over 17 years of experience, our dedicated team
+                                ensures
+                                high-quality workmanship
+                                and safety on every project. Partnering with clients like Adani Power, we are committed
+                                to
+                                delivering reliable and efficient solutions tailored to industry needs.</b></p>
                     </div>
                     <div class="flex flex-wrap">
                         <div class="p-4 md:w-1/2 xl:w-1/4">
                             <div class="bg-gray-50 dark:bg-gray-900">
-                                <a class="" href="#"><img
-                                        class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt"
-                                        src="https://images.unsplash.com/photo-1635324944940-0c0a9c8f9bf1?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBzcXVhcmV8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" /></a>
+                                <a class="" href="#"><img class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt" src="images/fab.png" /></a>
                                 <div class="p-6 rounded-lg dark:divide-undefined">
-                                    <h2
-                                        class="text-lg text-gray-900 title-font mb-0 font-heading font-semibold dark:divide-undefined dark:divide-undefined dark:text-gray-200">
-                                        Welding</h2>
+                                    <h2 class="text-lg text-gray-900 title-font mb-0 font-heading font-semibold dark:divide-undefined dark:divide-undefined dark:text-gray-200">
+                                        Fabrication & Erection of Structures</h2>
                                     <h3 class="tracking-widest text-xs font-medium title-font text-primary mb-2">
                                         Hot Work</h3>
-                                    <p class="">Expertly joining metal components with precision to ensure strong and
-                                        durable connections for various applications</p>
+                                    <p class="">We design, fabricate, and erect steel structures with precision and safety, ensuring durability and strength for industrial projects.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="p-4 md:w-1/2 xl:w-1/4">
-                            <div class="bg-gray-50 dark:bg-gray-900"><img
-                                    class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt"
-                                    src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" />
+                            <div class="bg-gray-50 dark:bg-gray-900">
+                                <img class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt" src="images/eret.png" />
                                 <div class="p-6 rounded-lg dark:divide-undefined">
-                                    <h2
-                                        class="text-lg text-gray-900 title-font mb-0 font-semibold dark:text-gray-200 dark:divide-undefined">
-                                        Scaffolding</h2>
+                                    <h2 class="text-lg text-gray-900 title-font mb-0 font-semibold dark:text-gray-200 dark:divide-undefined">
+                                        Erection of Equipment & Maintenance of Rotating Equipment</h2>
                                     <h3 class="tracking-widest text-xs font-medium title-font text-primary mb-2">
-                                        work At Height</h3>
-                                    <p class=""> Providing safe and reliable scaffolding solutions to support
-                                        maintenance and construction activities, ensuring worker safety and access to
-                                        elevated areas</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 xl:w-1/4">
-                            <div class="bg-gray-50 dark:bg-gray-900"><img
-                                    class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt"
-                                    src="https://images.unsplash.com/photo-1633783156075-a01661455344?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" />
-                                <div class="p-6 rounded-lg dark:divide-undefined">
-                                    <h2 class="text-lg text-gray-900 title-font font-semibold mb-0 dark:text-gray-200">
-                                        Rust Treatment</h2>
-                                    <h3 class="tracking-widest text-xs font-medium title-font text-primary mb-2">
-                                        Hot Work</h3>
-                                    <p class="">Designing and constructing robust structural elements tailored to the
-                                        specific needs of power plants, ensuring stability and compliance with industry
-                                        standards.
+                                        machinery work</h3>
+                                    <p class=""> Our team installs heavy machinery and equipment with accuracy, meeting technical specifications and safety standards & Our experts handle the maintenance of rotating machinery to enhance performance, reliability, and
+                                        reduce downtime.
 
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="p-4 md:w-1/2 xl:w-1/4">
-                            <div class="bg-gray-50 dark:bg-gray-900"><img
-                                    class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt"
-                                    src="https://images.unsplash.com/photo-1631700611307-37dbcb89ef7e?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" />
+                            <div class="bg-gray-50 dark:bg-gray-900"><img class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt" src="images/boil.jpg" />
                                 <div class="p-6 rounded-lg dark:divide-undefined">
                                     <h2 class="text-lg text-gray-900 title-font font-semibold mb-0 dark:text-gray-200">
-                                        Mechanical Replacement</h2>
+                                        Repair and Maintenance of Boiler Components</h2>
+                                    <h3 class="tracking-widest text-xs font-medium title-font text-primary mb-2">
+                                        Hot Work & Work at Height</h3>
+                                    <p class="">We offer specialized services for the repair and maintenance of boiler components, ensuring efficient and safe operation.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/2 xl:w-1/4">
+                            <div class="bg-gray-50 dark:bg-gray-900"><img class="h-40 rounded w-full object-cover object-center mb-2 xl:mb-0" alt="No alt" src="images/civil.png" />
+                                <div class="p-6 rounded-lg dark:divide-undefined">
+                                    <h2 class="text-lg text-gray-900 title-font font-semibold mb-0 dark:text-gray-200">
+                                        Miscellaneous Civil Works</h2>
                                     <h3 class="tracking-widest text-xs title-font text-primary mb-2 font-medium">
-                                        hot work</h3>
-                                    <p class="text-base">Expertly replacing and installing machinery components to
-                                        improve operational efficiency and reliability, minimizing downtime and
-                                        enhancing performance</p>
+                                        hot work ,Work At height </h3>
+                                    <p class="text-base">We provide a range of civil construction services, from small-scale repairs to large infrastructure projects, ensuring quality and compliance
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="">
-                <div class="text-center px-3 py-16 max-w-7xl mx-auto">
-                    <h1 class="font-black tracking-tight text-slate-900 text-3xl dark:text-slate-100 sm:text-4xl">We
-                        work as a Team!</h1>
-                    <p class="mt-3 text-lg max-w-lg mx-auto">Start growing in half the time with an all-in-one website
-                        builder - no more long hours spent on the boring stuff!</p>
-                    <div class="grid gap-2 mt-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                        <div class="text-center"><img class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt"
-                                src="https://images.pexels.com/photos/9968247/pexels-photo-9968247.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" />
-                            <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">John Doe</h1>
-                            <p class="">CEO  &amp; CTO</p>
-                        </div>
-                        <div class="text-center"><img class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt"
-                                src="https://images.pexels.com/photos/3211476/pexels-photo-3211476.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" />
-                            <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">Doe John</h1>
-                            <p class="">Marketing Director</p>
-                        </div>
-                        <div class="text-center"><img class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt"
-                                src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" />
-                            <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">Lita Hayden</h1>
-                            <p class="">Graphic Designer</p>
-                        </div>
-                        <div class="text-center"><img class="rounded-full w-60 mx-auto mb-4 bg-blue-100" alt="No alt"
-                                src="https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" />
-                            <h1 class="text-2xl font-bold dark:text-slate-200 text-slate-800">William Sendrick</h1>
-                            <p class="">Developer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                    <h2
-                        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
-                        I could either watch it happen or be a part of it</h2>
-                    <p class="text-base md:text-lg"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae. </p>
+                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+                        Recent Works</h2>
+                    <p class="text-base md:text-lg"> In recent months, we have successfully completed numerous projects, showcasing our expertise in fabrication, erection, and maintenance services. Our commitment to quality and safety has allowed us to meet and exceed client expectations
+                        across various industrial sectors. We are proud to continue delivering reliable solutions that drive success for our partners. </p>
                 </div>
                 <div class="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
-                    <div
-                        class="flex items-center p-2 transition-colors duration-200 border shadow group hover:bg-primary-500 hover:border-primary-500 rounded-global">
-                        <div class="mr-2"><span
-                                class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
+                    <div class="flex items-center p-2 transition-colors duration-200 border shadow group hover:bg-primary-500 hover:border-primary-500 rounded-global">
+                        <div class="mr-2"><span class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
                                     class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"
                                     class="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
                                     stroke="currentColor" viewBox="0 0 52 52">
                                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg></span></div><span
-                            class="transition-colors duration-200 group-hover:text-white">Change the world by being
-                            yourself.</span>
+                                </svg></span></div><span class="transition-colors duration-200 group-hover:text-white">Conveyer line
+                            Repairing.</span>
                     </div>
-                    <div
-                        class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
-                        <div class="mr-2"><span
-                                class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
+                    <div class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
+                        <div class="mr-2"><span class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
                                     class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"
                                     class="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
                                     stroke="currentColor" viewBox="0 0 52 52">
                                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg></span></div><span
-                            class="transition-colors duration-200 group-hover:text-white">Die with memories, not
+                                </svg></span></div><span class="transition-colors duration-200 group-hover:text-white">Die with memories, not
                             dreams.</span>
                     </div>
-                    <div
-                        class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
-                        <div class="mr-2"><span
-                                class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
+                    <div class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
+                        <div class="mr-2"><span class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
                                     class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"
                                     class="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
                                     stroke="currentColor" viewBox="0 0 52 52">
                                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg></span></div><span
-                            class="transition-colors duration-200 group-hover:text-white">What we think, we
+                                </svg></span></div><span class="transition-colors duration-200 group-hover:text-white">What we think, we
                             become.</span>
                     </div>
-                    <div
-                        class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
-                        <div class="mr-2"><span
-                                class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
+                    <div class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
+                        <div class="mr-2"><span class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
                                     class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"
                                     class="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
                                     stroke="currentColor" viewBox="0 0 52 52">
                                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg></span></div><span
-                            class="transition-colors duration-200 group-hover:text-white">Be so good they can’t ignore
+                                </svg></span></div><span class="transition-colors duration-200 group-hover:text-white">Be so good they can’t ignore
                             you.</span>
                     </div>
-                    <div
-                        class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
-                        <div class="mr-2"><span
-                                class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
+                    <div class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
+                        <div class="mr-2"><span class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
                                     class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"
                                     class="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
                                     stroke="currentColor" viewBox="0 0 52 52">
                                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg></span></div><span
-                            class="transition-colors duration-200 group-hover:text-white">Simplicity is the ultimate
+                                </svg></span></div><span class="transition-colors duration-200 group-hover:text-white">Simplicity is the ultimate
                             sophistication.</span>
                     </div>
-                    <div
-                        class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
-                        <div class="mr-2"><span
-                                class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
+                    <div class="flex items-center p-2 transition-colors duration-200 border shadow group hover:border-primary-500 hover:bg-primary-500 rounded-global">
+                        <div class="mr-2"><span class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"><svg
                                     class="w-6 h-6 transition-colors duration-200 group-hover:text-white text-primary-500 sm:w-8 sm:h-8"
                                     class="w-6 h-6 transition-colors duration-200 text-deep-purple-accent-400 group-hover:text-white sm:w-8 sm:h-8"
                                     stroke="currentColor" viewBox="0 0 52 52">
                                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                                </svg></span></div><span
-                            class="transition-colors duration-200 group-hover:text-white">Yesterday you said tomorrow.
+                                </svg></span></div><span class="transition-colors duration-200 group-hover:text-white">Yesterday you said tomorrow.
                             Just do it today.</span>
                     </div>
                 </div>
@@ -408,173 +336,52 @@
                 <div class="mx-auto sm:text-center lg:max-w-2xl">
                     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                         <div class="">
-                            <p
-                                class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-secondary text-white">
-                                New Store</p>
+                            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-secondary text-white">
+                                PROPRIETOR</p>
                         </div>
-                        <h2
-                            class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl md:mx-auto">
-                            Street Food is an amazing</h2>
-                        <p class="text-base md:text-lg"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque rem aperiam, eaque ipsa quae. </p>
+                        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl md:mx-auto">
+                            RATHEESH N</h2>
+                        <p class="text-base md:text-lg font-bold "> "With over 17 years of experience, I believe that every challenge is an opportunity to build something exceptional—driven by experience, guided by integrity, and committed to lasting excellence." – Ratheesh N. </p>
                     </div>
-                    <div class="mb-4 lg:mb-6"><img
-                            class="object-cover w-full h-56 rounded sm:h-64 md:h-80 lg:h-96 lg:object-contain"
-                            alt="No alt"
-                            src="https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" />
+                    <div class="mb-4 lg:mb-6"><img class="object-cover w-full h-56 rounded sm:h-64 md:h-80 lg:h-96 lg:object-contain" alt="No alt" src="https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
+                        />
                     </div>
-                    <p class="max-w-xl mb-4 text-base sm:mx-auto"> Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud ullamco laboris aliquip ex ea. </p><a
-                        class="inline-flex items-center font-semibold transition-colors duration-200 text-secondary hover:text-secondary-800"
-                        href="#"><span class=""> Learn more </span><span class="inline-block w-3 ml-2"><svg
-                                class="inline-block w-3 ml-2" class="inline-block w-3 ml-2" fill="currentColor"
-                                viewBox="0 0 12 12">
-                                <path
-                                    d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
-                                </path>
-                            </svg></span></a>
+                    <p class=" max-w-xl mb-4 text-base sm:mx-auto"> Ratheesh N, the proprietor of our company, brings over 17 years of industry experience in Power Plant . His leadership and vision have guided the team in delivering exceptional quality and safety on every project. With a strong commitment
+                        to excellence, Ratheesh is dedicated to driving the company's growth and ensuring client satisfaction.
+                    </p>
                 </div>
             </div>
-            <div class="py-6 sm:py-8 lg:py-12">
-                <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-                    <div class="mb-10 md:mb-16">
-                        <h2
-                            class="font-bold text-center mb-4 text-3xl text-slate-900 dark:text-slate-100 md:mb-6 lg:text-4xl">
-                            Our competitive advantage</h2>
-                        <p class="max-w-screen-md md:text-lg text-center mx-auto">This is a section of some simple
-                            filler text, also known as placeholder text. It shares some characteristics of a real
-                            written text but is random or otherwise generated.</p>
-                    </div>
-                    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-indigo-500 mb-2 sm:mb-4">
-                                <span class="w-full h-full text-primary"><svg class="w-full h-full text-primary"
-                                        xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                    </svg></span>
-                            </div>
-                            <h3 class="text-lg md:text-xl font-semibold text-center mb-2">Growth</h3>
-                            <p class="text-center mb-2">Filler text is dummy text which has no meaning however looks
-                                very similar to real text.</p><a
-                                class="font-bold transition duration-100 text-primary hover:text-primary-700 active:text-primary-700"
-                                href="#">More</a>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-indigo-500 mb-2 sm:mb-4">
-                                <span class="w-full h-full text-primary"><svg class="w-full h-full text-primary"
-                                        xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                    </svg></span>
-                            </div>
-                            <h3 class="text-lg md:text-xl font-semibold text-center mb-2">Security</h3>
-                            <p class="text-center mb-2">Filler text is dummy text which has no meaning however looks
-                                very similar to real text.</p><a
-                                class="font-bold transition duration-100 text-primary hover:text-primary-700 active:text-primary-700"
-                                href="#">More</a>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-indigo-500 mb-2 sm:mb-4">
-                                <span class="w-full h-full text-primary"><svg class="w-full h-full text-primary"
-                                        xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                                    </svg></span>
-                            </div>
-                            <h3 class="text-lg md:text-xl font-semibold text-center mb-2">Cloud</h3>
-                            <p class="text-center mb-2">Filler text is dummy text which has no meaning however looks
-                                very similar to real text.</p><a
-                                class="font-bold transition duration-100 text-primary hover:text-primary-700 active:text-primary-700"
-                                href="#">More</a>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-indigo-500 mb-2 sm:mb-4">
-                                <span class="w-full h-full text-primary"><svg class="w-full h-full text-primary"
-                                        xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg></span>
-                            </div>
-                            <h3 class="text-lg md:text-xl font-semibold text-center mb-2">Speed</h3>
-                            <p class="text-center mb-2">Filler text is dummy text which has no meaning however looks
-                                very similar to real text.</p><a
-                                class="font-bold transition duration-100 text-primary hover:text-primary-700 active:text-primary-700"
-                                href="#">More</a>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-indigo-500 mb-2 sm:mb-4">
-                                <span class="w-full h-full text-primary"><svg class="w-full h-full text-primary"
-                                        xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                                    </svg></span>
-                            </div>
-                            <h3 class="text-lg md:text-xl font-semibold text-center mb-2">Support</h3>
-                            <p class="text-center mb-2">Filler text is dummy text which has no meaning however looks
-                                very similar to real text.</p><a
-                                class="font-bold transition duration-100 text-primary hover:text-primary-700 active:text-primary-700"
-                                href="#">More</a>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-indigo-500 mb-2 sm:mb-4">
-                                <span class="w-full h-full text-primary"><svg class="w-full h-full text-primary"
-                                        xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                                    </svg></span>
-                            </div>
-                            <h3 class="text-lg md:text-xl font-semibold text-center mb-2">Dark Mode</h3>
-                            <p class="text-center mb-2">Filler text is dummy text which has no meaning however looks
-                                very similar to real text.</p><a
-                                class="font-bold transition duration-100 text-primary hover:text-primary-700 active:text-primary-700"
-                                href="#">More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="">
                 <div class="mx-auto px-4 max-w-7xl">
                     <div class="grid -mx-4 sm:grid-cols-2 lg:grid-cols-4">
                         <div class="px-4">
                             <div class="py-6">
                                 <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">50+</h3>
-                                <h5 class="text-black text-lg font-semibold dark:text-white">Reusable Components</h5>
-                                <p class="text-sm">orem ipsum dolor sit amet conse ctetur adipiscing elit</p>
+                                <h5 class="text-black text-lg font-semibold dark:text-white">Projects Completed</h5>
+
                             </div>
                         </div>
                         <div class="px-4">
                             <div class="py-6">
-                                <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">54%</h3>
-                                <h5 class="text-black text-lg font-semibold dark:text-white">Fully Customizable</h5>
-                                <p class="text-sm">orem ipsum dolor sit amet conse ctetur adip</p>
+                                <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">17+</h3>
+                                <h5 class="text-black text-lg font-semibold dark:text-white">Years Of Experience</h5>
+
                             </div>
                         </div>
                         <div class="px-4">
                             <div class="py-6">
-                                <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">24</h3>
-                                <h5 class="text-black text-lg font-semibold dark:text-white">Dark Mode Support</h5>
-                                <p class="text-sm">orem ipsum dolor sit amet conse ctetur adipiscite</p>
+                                <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">0 </h3>
+                                <h5 class="text-black text-lg font-semibold dark:text-white">Accidents in last 5 years
+                                </h5>
+
                             </div>
                         </div>
                         <div class="px-4">
                             <div class="py-6">
-                                <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">100%</h3>
-                                <h5 class="text-black text-lg font-semibold dark:text-white">Export Code</h5>
-                                <p class="text-sm">Lorem ipsum dolor sit amet conse aute irure dol</p>
+                                <h3 class="text-primary-500 text-4xl font-bold lg:mb-4">70+</h3>
+                                <h5 class="text-black text-lg font-semibold dark:text-white">Team Memebers</h5>
+
                             </div>
                         </div>
                     </div>
@@ -586,6 +393,86 @@
         </html>
 
     </div>
+
+    <footer style="margin-top: 250px; background: #d1d1d1; color: rgb(0, 0, 0); position: relative; width: 100%;">
+        <div style="display: flex;">
+            <div style="padding-left: 35px;">
+                <img src="images/logo.png" alt="" style="width: 250px; margin-top: 43px;">
+                <br>
+                <div style="display: flex; align-items: center; margin-top: 13px; padding-left: 5px;">
+                    <a href="#" style="text-decoration: none; transition: 0.5s; color: rgb(0, 0, 0);">
+                        <i class="fa-brands fa-facebook-f" style="color: #000000; font-size: 17px; margin-right: 15px;"></i>
+                    </a>
+                    <a href="#" style="text-decoration: none; transition: 0.5s; color: rgb(0, 0, 0);">
+                        <i class="fa-brands fa-instagram" style="color: #000000; font-size: 17px; margin-right: 15px;"></i>
+                    </a>
+                    <a href="#" style="text-decoration: none; transition: 0.5s; color: rgb(0, 0, 0);">
+                        <i class="fa-brands fa-twitter" style="color: #000000; font-size: 17px; margin-right: 15px;"></i>
+                    </a>
+                    <a href="#" style="text-decoration: none; transition: 0.5s; color: rgb(0, 0, 0);">
+                        <i class="fa-brands fa-linkedin-in" style="color: #000000; font-size: 17px; margin-right: 15px;"></i>
+                    </a>
+                </div>
+                <br>
+                <span style="margin-top: 25px;">Address: Jayalakshmi enclave, padubidri , karnatka -574111 </span>
+            </div>
+            <div style="padding-left: 35px;">
+                <h6 style="color: #000000; font-size: 20px; font-weight: 700; margin-bottom: 15px; margin-top: 50px;">About</h6>
+                <p>Since 2018, Inspire Engineering Services has specialized in industrial maintenance and fabrication. With over 17 years of experience, we deliver high-quality, safe, and timely project outcomes in partnership with industry leaders like
+                    Adani Power Limited.
+
+                </p>
+            </div>
+            <div style="padding-left: 35px;">
+                <h6 style="color: #000000; font-size: 20px; font-weight: 700; margin-bottom: 15px; margin-top: 50px;">Get Help</h6>
+                <a href="#" style="text-decoration: none; transition: 0.5s; color: rgb(0, 0, 0);">
+                    <i class="fa-brands fa-whatsapp" style="margin-right: 5px;"></i>Whatsapp <br> +91 7660990542
+                </a>
+            </div>
+            <div style="padding-left: 35px;">
+                <h6 style="color: #000000; font-size: 20px; font-weight: 700; margin-bottom: 15px; margin-top: 50px;">Contact</h6>
+                <a href="#" style="text-decoration: none; transition: 0.5s; color: rgb(0, 0, 0);">inspireenggservices@gmail.com</a>
+            </div>
+        </div>
+        <div style="color: #000000; font-size: 16px; font-weight: 500; text-align: center; height: 45px; background-color: #e93d2a; padding-top: 15px;">
+            Copyright &#169; 2024 | inspire Engineering Services | All rights reserved
+        </div>
+    </footer>
+
+    <style>
+        @media (max-width: 750px) {
+            footer div {
+                padding-left: 0;
+                text-align: center;
+            }
+            footer img {
+                width: 200px;
+                margin-top: 30px;
+            }
+            footer h6 {
+                margin-top: 20px;
+            }
+            footer p,
+            footer a,
+            footer span {
+                font-size: 14px;
+            }
+            footer .fa-brands {
+                font-size: 14px;
+            }
+            footer .fa-brands.fa-facebook-f,
+            footer .fa-brands.fa-instagram,
+            footer .fa-brands.fa-twitter,
+            footer .fa-brands.fa-linkedin-in {
+                margin-right: 10px;
+            }
+            footer div:nth-child(n+2) {
+                margin-top: 30px;
+            }
+        }
+    </style>
+
+
 
 
 </body>
